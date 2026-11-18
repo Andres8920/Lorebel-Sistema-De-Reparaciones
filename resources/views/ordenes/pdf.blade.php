@@ -469,7 +469,7 @@
         <div class="info-section">
             <h2>💰 Presupuesto</h2>
             <div class="presupuesto-info">
-                <div class="amount">${{ number_format($orden->presupuesto, 2) }}</div>
+                <div class="amount">$ {{ number_format($orden->presupuesto, 2, ',', '.') }}</div>
                 <div class="status">
                     {{ $orden->presupuesto_estado_texto }}
                     @if($orden->presupuesto_aprobado === true)
@@ -494,15 +494,15 @@
             <table class="costos-table">
                 <tr>
                     <td class="label">Costo de Repuestos</td>
-                    <td class="amount">${{ number_format($orden->costo_repuestos, 2) }}</td>
+                    <td class="amount">$ {{ number_format($orden->costo_repuestos, 2, ',', '.') }}</td>
                 </tr>
                 <tr>
                     <td class="label">Costo de Mano de Obra</td>
-                    <td class="amount">${{ number_format($orden->costo_mano_obra, 2) }}</td>
+                    <td class="amount">$ {{ number_format($orden->costo_mano_obra, 2, ',', '.') }}</td>
                 </tr>
                 <tr class="total-row">
                     <td class="label">TOTAL</td>
-                    <td class="amount">${{ number_format($orden->costo_total, 2) }}</td>
+                    <td class="amount">$ {{ number_format($orden->costo_total, 2, ',', '.') }}</td>
                 </tr>
             </table>
         </div>

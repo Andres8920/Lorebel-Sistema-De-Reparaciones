@@ -62,3 +62,7 @@ yarn-debug.log*
 # Compilados
 dist/
 build/
+
+# PHPUnit
+.phpunit.result.cache
+/.phpunit.cache/

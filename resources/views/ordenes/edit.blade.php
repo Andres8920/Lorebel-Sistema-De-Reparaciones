@@ -473,7 +473,7 @@
                         <div class="alert alert-info mb-0">
                             <strong>Costo Total:</strong>
                             <span id="costo-total-display" class="float-end">
-                                ${{ number_format($orden->costo_total ?? 0, 2) }}
+                                $ {{ number_format($orden->costo_total ?? 0, 2, ',', '.') }}
                             </span>
                         </div>
                     </div>
@@ -696,7 +696,7 @@
         const repuestos = parseFloat(document.getElementById('costo_repuestos').value) || 0;
         const manoObra = parseFloat(document.getElementById('costo_mano_obra').value) || 0;
         const total = repuestos + manoObra;
-        document.getElementById('costo-total-display').textContent = '$' + total.toFixed(2);
+        document.getElementById('costo-total-display').textContent = '$ ' + total.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
 
     document.getElementById('costo_repuestos').addEventListener('input', calcularCostoTotal);

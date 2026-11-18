@@ -204,7 +204,7 @@
                     </div>
                     <div class="card-body">
                         <h3 class="mb-3 text-success">
-                            ${{ number_format($orden->presupuesto, 2) }}
+                            $ {{ number_format($orden->presupuesto, 2, ',', '.') }}
                         </h3>
 
                         <div class="mb-3">
@@ -242,17 +242,17 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-2">
                             <span>Repuestos:</span>
-                            <strong>${{ number_format($orden->costo_repuestos, 2) }}</strong>
+                            <strong>$ {{ number_format($orden->costo_repuestos, 2, ',', '.') }}</strong>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                             <span>Mano de Obra:</span>
-                            <strong>${{ number_format($orden->costo_mano_obra, 2) }}</strong>
+                            <strong>$ {{ number_format($orden->costo_mano_obra, 2, ',', '.') }}</strong>
                         </div>
                         <hr>
                         <div class="d-flex justify-content-between">
                             <strong>Total:</strong>
                             <h5 class="mb-0 text-success">
-                                ${{ number_format($orden->costo_total, 2) }}
+                                $ {{ number_format($orden->costo_total, 2, ',', '.') }}
                             </h5>
                         </div>
                     </div>

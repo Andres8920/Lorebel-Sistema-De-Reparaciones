@@ -8,7 +8,9 @@
 
 Usuarios (contraseña `Lorebel2026!`): admin@lorebel.com (administrador), caja@lorebel.com (recepción/caja), tecnico@lorebel.com (técnico).
 
-Tests: `php artisan test` (30 pruebas).
+Tests: `php artisan test` (42 pruebas: 32 de la iteración 2 y 10 de anulación, reintegro y reportes en `tests/Feature/AnulacionReintegroReportesTest.php`).
+
+Requisito de PHP: el `composer.lock` incluye Symfony 8, que exige PHP 8.4. Con PHP 8.2 u 8.3 ejecutar `composer config platform.php 8.2.0 && composer update` antes de instalar.
 
 ## Archivos nuevos
 - config/pagos.php

@@ -141,7 +141,7 @@
                                     </td>
                                     <td>
                                         @if($orden->presupuesto)
-                                            <strong class="text-success">${{ number_format($orden->presupuesto, 2) }}</strong>
+                                            <strong class="text-success">$ {{ number_format($orden->presupuesto, 2, ',', '.') }}</strong>
                                             @if($orden->presupuesto_aprobado === true)
                                                 <br>
                                                 <small class="text-success">

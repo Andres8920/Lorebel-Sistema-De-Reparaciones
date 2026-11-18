@@ -165,12 +165,12 @@
                                                         </small>
                                                     </div>
                                                     <p class="mb-2">
-                                                        <strong>Problema:</strong> {{ $reparacion->descripcion_problema }}
+                                                        <strong>Problema:</strong> {{ $reparacion->problema_reportado }}
                                                     </p>
-                                                    @if($reparacion->costo_final)
+                                                    @if($reparacion->importe_a_cobrar > 0)
                                                         <p class="mb-0">
                                                             <strong>Costo:</strong>
-                                                            <span class="text-success fw-bold">${{ number_format($reparacion->costo_final, 2) }}</span>
+                                                            <span class="text-success fw-bold">$ {{ number_format($reparacion->importe_a_cobrar, 2, ',', '.') }}</span>
                                                         </p>
                                                     @endif
                                                 </div>
